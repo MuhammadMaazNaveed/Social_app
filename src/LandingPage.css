@@ -1,0 +1,22 @@
+/* For Custom scroll bar start */
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(#51446F, #000000);
+    border: .20em solid #51446F;
+    border-radius: 100vw;
+    transition: .1s ease;
+    margin-block: .5em;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#000000, #51446F);
+}
+
+/* For Custom scroll bar end  */
