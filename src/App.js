@@ -12,16 +12,16 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/landingPage" element={<LandingPage />} />
         </Routes>
 
-        {/* <Sidebar>
+        <Sidebar>
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Profile />} />
             <Route path="/notification" element={<Notification />} />
           </Routes>
-        </Sidebar> */}
+        </Sidebar>
       </Router >
     </>
   );
