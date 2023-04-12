@@ -10,19 +10,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
         </Routes>
 
-        <Sidebar>
+        {/* <Sidebar>
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/dashboard" element={<Profile />} />
             <Route path="/notification" element={<Notification />} />
           </Routes>
-        </Sidebar>
+        </Sidebar> */}
       </Router >
     </>
   );
