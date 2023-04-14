@@ -14,11 +14,11 @@ import Trending from "./Trending";
 import TopBar from "./TopBar";
 import Model from "./Model";
 const routes = [
-  // {
-  //   path: "/newPost",
-  //   name: "Post",
-  //   icon: <AiFillPlusCircle />,
-  // },
+  {
+    path: "/createpost",
+    name: "Post",
+    icon: <AiFillPlusCircle />,
+  },
   {
     path: "/draft",
     name: "Drafts",
@@ -88,22 +88,12 @@ const Sidebar = ({ children }) => {
     },
   };
   const [showModal, setShowModal] = useState(false);
-  const closeModal = () => setShowModal(false);
+  // const closeModal = () => setShowModal(false);
 
-  const handleCloseButton = (
-    <button className="model-btn" onClick={closeModal}>
-      Accept It
-    </button>
-  );
 
   const mainModal = (
-    <Model closeModal={closeModal} handleCloseButton={handleCloseButton}>
-      <h2>STAY TUNED</h2>
-      <p>
-        Subscribe to our newsletter and never miss our designs ,latest news.etc.
-        Our newsletter is sent once a week, every Monday
-      </p>
-    </Model>)
+    <Model >
+    </Model >)
   return (
     <div className="upper_container">
       <div className="container_section">
@@ -123,12 +113,6 @@ const Sidebar = ({ children }) => {
               </AnimatePresence>
             </div>
             <div className="middle_sidebar_item">
-              <button onClick={() => setShowModal(true)} className='links'><AiFillPlusCircle />{
-
-                !isOpen &&
-                "Open Modal"
-              }
-              </button>
               {showModal && mainModal}
               {
                 routes.map((route) => (
